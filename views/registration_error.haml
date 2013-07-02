@@ -1,0 +1,23 @@
+- content_for :title do
+  %title= "Registration Error"
+
+- content_for :body do
+  #registration
+    .navbar.navbar-fixed-top
+      .navbar-inner
+        .container
+          .brand Registration Error
+          %a.btn.btn-large.btn-primary.pull-right{:href=>"/events/calendar"} Events
+                                
+    #display.container
+      .row
+        .span8.offset1.hero-unit
+          .row
+            .span5
+              = @error
+            .span2  
+
+        .span2
+
+
+        

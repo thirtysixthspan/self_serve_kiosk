@@ -1,0 +1,28 @@
+- content_for :title do
+  %title= "The 404 Store"
+
+- content_for :head do
+  %meta{:"http-equiv"=>"Refresh", :content=>"240; url=/store/welcome"}
+  
+- content_for :body do  
+  #select_items
+    %form{:action=>"/store/your_purchase", :method=>'post'}
+      .navbar.navbar-fixed-top
+        .navbar-inner
+          .container
+            .brand Select Items
+            %input.btn.btn-large.btn-primary.pull-right{:type=>'submit', :value=>'Checkout'}
+          
+      #display
+        #items.container
+          - items_for_sale = @items_for_sale.to_a
+          - while items_for_sale.size>0
+            .row
+              - items_for_sale.shift(5).each do |name,item|
+                .span2.item
+                  %h2= "#{name} : #{display_price(item[:price])}"
+                  %img{:src=>"/images/#{item[:picture]}",:name=>name}
+                  %a.btn.btn-inverse.minus{:name=>name} -
+                  %input{:class=>'number',:type=>'text', :size=>1, :value=>0, :name=>name}
+                  %a.btn.btn-inverse.plus{:name=>name} +
+       

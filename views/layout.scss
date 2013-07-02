@@ -1,0 +1,43 @@
+html {
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  background: url('/images/store.png') no-repeat;
+  background-size: 100%;
+}
+
+.clear {
+  clear: both;
+  height: 1px;
+  width: 100%;
+}
+
+#stripe {
+  height: 10px;
+  width: 100%;          
+  float: left;
+}
+
+#header_wrap {
+  height: 492px;
+}
+
+#header_wrap_inner {
+  height: 92px;
+}
+
+.nine {
+  margin-left: auto;
+  margin-right: auto;
+  width: 950px;
+}
+
+.thumbnails li {
+  list-style-type: none;
+}
+
+
+
+
+

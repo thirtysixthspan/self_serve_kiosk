@@ -1,0 +1,28 @@
+- content_for :title do
+  %title= "The 404 Network and Internet Usage Rules"
+
+- content_for :body do
+  #about
+    = haml_partial :navbar
+
+    #display.container
+      .row
+        .span8.offset1.hero-unit
+          .hero-unit
+            %h1 The Space
+            %h2 Friendly Coworking
+            %p Our facility offers a wide variety of coworking space, from dedicated desks to a comfortable coworking space with couches and beanbags.
+            %h2 Facility Access
+            %p
+              We offer memberships that include 9 am - 9 pm access as well as 24/7 access
+            %h2 Dedicated Desks
+            %p The space currently features 8 dedicated desks located at the front of the building, with ample lighting and plenty of space.
+            %p
+              For current pricing, please visit the
+              %a{:href => '/memberships'} memberships page
+            %img{ :src => "/images/gallery/facility-004.jpg"}
+            %h2 Coworking Space
+            %p
+              We have a great coworking space in the back of the building. It has several different seating options:
+              a tall table, several movable chairs and couches, as well as beanbags.
+            %img{ :src => "/images/gallery/facility-023.jpg"}

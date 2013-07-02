@@ -1,0 +1,26 @@
+
+- content_for :title do
+  %title= "Registration Denied"
+
+- content_for :body do
+  #registration
+    .navbar.navbar-fixed-top
+      .navbar-inner
+        .container
+          .brand Registration Denied
+                                
+    #display.container
+      .row
+        .span8.offset1.hero-unit
+          .row
+            .span5
+              Your name or email is on our event registration ban list. We're sorry
+              but you cannot register or attend events at The 404. If you think that
+              you have been placed on the ban list inappropriately, please contact
+              %a{:href=>"mailto:questions@self_service_kiosk.com"} questions@self_service_kiosk.com
+            .span2  
+
+        .span2
+
+
+        

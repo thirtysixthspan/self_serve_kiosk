@@ -1,0 +1,33 @@
+- content_for :title do
+  %title= "Edit #{@model} at the 404"
+
+- content_for :body do
+  #customers
+    .navbar.navbar-fixed-top
+      .navbar-inner
+        .container
+          .brand Edit #{@model} at the 404
+          %a.btn.btn-large.pull-right{:href=>"/admin"} Panel
+          %a.btn.btn-large.pull-right{:href=>"/admin/inspect/#{@model}"}= @model
+         
+    #display.container
+      %form{:action=>"/admin/update/#{@model}/#{@instance.id.gsub(/.*?:id:/,'')}", :method=>'post'}
+        .row
+          .span11.hero-unit
+            %table
+              %thead
+                %tr
+                  %th Key
+                  %th Value
+              %tbody
+                - @model.property_names.each do |key|
+                  %tr
+                    %td= key
+                    %td
+                      %input{:type=>'text', :size=>80, :name=>"#{@model}[#{key}]", :value=>@properties[key]}
+
+        .row
+          .span11
+            %input.btn.btn-large{:type=>'submit', :value=>'Update'}
+
+

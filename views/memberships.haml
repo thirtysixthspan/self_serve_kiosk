@@ -1,0 +1,77 @@
+- content_for :title do
+  %title= "The 404"
+
+- content_for :body do
+  #about
+    = haml_partial :navbar
+                    
+    #display.container
+      .row
+        .span8.offset1.hero-unit
+          .hero-unit
+            %h1 Memberships
+
+            %h3 Community Members - $25 per month
+            %ul
+              %li 9am - 9pm keycard access to facility
+              %li access to the 404 lounge
+              %li usage of the coworking areas for up to 1 or 2 hours per day
+              %li access to internal community mailing list
+              %li 404 Store discounts
+              %li event discounts
+
+            %h3 Community Leaders - by award only
+            %ul
+              %li 24/7 access to facility
+              %li access and reserve the 404 lounge
+              %li ability to schedule events and reserve rooms
+              %li access to internal community mailing list
+              %li 404 Store discounts
+              %li event discounts
+
+            %h3 Coworking Members - $150 per month
+            %ul
+              %li 24/7 access to facility
+              %li access and reserve the 404 lounge
+              %li usage of the coworking areas
+              %li ability to reserve conference rooms for business meetings
+              %li access to internal community mailing list
+              %li 404 Store discounts
+              %li event discounts
+
+            %h3 Reserved Desk Members - $300 per month
+            %ul
+              %li 24/7 access to facility
+              %li reserved desk in work area
+              %li access and reserve the 404 lounge
+              %li usage of the coworking areas
+              %li ability to reserve conference rooms for business meetings
+              %li access to internal community mailing list
+              %li 404 Store discounts
+              %li event discounts
+
+            %h3 Lifetime members - by award only
+            %ul
+              %li 24/7 access to facility
+              %li access and reserve the 404 lounge
+              %li usage of the coworking areas
+              %li ability to reserve conference rooms for business meetings
+              %li access to internal community mailing list
+              %li 404 Store discounts
+              %li event discounts
+
+            %h3 Business Membership - $150 per month
+            %ul
+              %li Community Memberships for 5 employees
+              %li reserve conference rooms for business meetings
+              %li ability to reserve conference rooms for offsites
+              %li cobranding including logo and link on website
+
+            %hr
+              
+            %iframe{:src=>"https://docs.google.com/spreadsheet/embeddedform?formkey=dDM5STVNd2k4Ym5rVWVUTWxBRG5OS2c6MA", 
+            :width=>"550",
+            :height=>"2650",
+            :frameborder=>"0", 
+            :marginheight=>"0",
+            :marginwidth=>"0"}

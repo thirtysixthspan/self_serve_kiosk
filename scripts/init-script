@@ -1,0 +1,52 @@
+#!/bin/bash
+
+APP_NAME="self_service_kiosk.com"
+APP_ROOT="/srv/www/$APP_NAME/current"
+PID="/srv/pids/$APP_NAME/unicorn*.pid"
+APP_USER="deployer"
+
+
+cd $APP_ROOT || exit 1
+
+function start_unicorn() 
+{
+  echo "Starting Unicorn"
+  bundle exec unicorn -e 'puts "Passphrase:"; AES_PASSPHRASE = STDIN.gets.chomp' -D -E production -c $APP_ROOT/config/unicorn-production.rb
+}
+
+function exists() 
+{
+  for x in $*; do
+    [ -f $x ] && return 0;
+  done
+  return 1
+}
+
+function signal() 
+{
+  if exists $PID
+  then
+    echo "Stopping Unicorn"
+    pkill -$1 -f unicorn.*$APP_NAME
+    rm $PID
+  fi
+  return 0
+}
+
+case $1 in
+start|restart)
+	signal KILL
+        start_unicorn
+	exit 0
+	;;
+  
+stop)
+	signal KILL
+	exit 0
+	;;
+
+*)
+ 	echo >&2 "Usage: $0 <start|stop|restart>"
+	exit 1
+ 	;;
+esac

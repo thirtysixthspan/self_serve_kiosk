@@ -1,0 +1,13 @@
+#message
+  %p
+    In order to register for 
+    #{@event.title} at #{@confirmation.event.location} starting at 
+    #{Time.at(@event.date.to_i).strftime("%l:%M%P %A, %-d %B, %Y")},
+    we need you to follow the link below to establish your identity.
+  %p
+    %a{:href=>"https://self_service_kiosk.com/events/registration_confirmation/#{@confirmation.uuid}"} Confirm your registration
+
+#footer
+  %p 
+    This message was sent by the event registration system at self_service_kiosk.com.
+    If this message reached you in error, we apologize and ask you to please delete it.

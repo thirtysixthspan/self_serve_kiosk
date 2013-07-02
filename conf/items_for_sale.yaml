@@ -1,0 +1,42 @@
+---
+Energy Drinks:
+  :price: 250
+  :picture: energy_drinks.png
+
+Tea and Juices:
+  :price: 200
+  :picture: tea_and_juice.png
+  
+Soda:
+  :price: 150
+  :picture: soda.png
+
+Bottled Water:
+  :price: 100
+  :picture: water.png  
+  
+Automated Coffee:
+  :price: 250
+  :picture: automated_coffee.png
+
+Pour Over Coffee:
+  :price: 250
+  :picture: pour_over_coffee.png
+
+Tea:
+  :price: 150
+  :picture: tea.png
+
+Candy:
+  :price: 200
+  :picture: candy_bar.png
+
+Cookies:
+  :price: 100
+  :picture: cookies.png
+
+Chips:
+  :price: 100
+  :picture: chips.png
+  
+  

@@ -1,0 +1,22 @@
+DOMAIN=self_service_kiosk.com
+
+cp config/nginx-production-site.conf /srv/nginx/conf/sites-enabled/$DOMAIN 
+
+mkdir -p /srv/www/$DOMAIN/charges/
+chown -R deployer:deployer /srv/www/$DOMAIN/charges/
+mkdir -p /srv/www/$DOMAIN/orders/
+chown -R deployer:deployer /srv/www/$DOMAIN/orders/
+mkdir -p /srv/www/$DOMAIN/invoices/
+chown -R deployer:deployer /srv/www/$DOMAIN/orders/
+
+mkdir -p /srv/www-log/$DOMAIN
+chown -R deployer:deployer /srv/www-log/$DOMAIN
+
+mkdir -p /srv/pids/$DOMAIN
+chown deployer:deployer /srv/pids/$DOMAIN
+
+mkdir -p /srv/sockets
+chown deployer:deployer /srv/sockets
+
+cp -v scripts/init-script /etc/init.d/$DOMAIN
+chmod a+x /etc/init.d/$DOMAIN

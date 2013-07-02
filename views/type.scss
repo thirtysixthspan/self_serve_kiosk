@@ -1,0 +1,61 @@
+@font-face {
+  font-family: "Gudea-Bold";
+  src: url('/fonts/Gudea-Bold.ttf');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Gudea-Regular";
+  src: url('/fonts/Gudea-Regular.ttf');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Oswald";
+  src: url('/fonts/Oswald.ttf');
+}
+
+@font-face {
+  font-family: "Muli";
+  src: url('/fonts/Muli-Regular.ttf');
+}
+
+@font-face {
+  font-family: "Muli-Light";
+  src: url('/fonts/Muli-Light.ttf');
+}
+
+body {
+  font-family: "Muli", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5em;
+  font-size: 14px;
+  color: $md_gray;
+}
+
+
+h1 { margin: 1em 0 1em 0; font-size: 3em; }
+h2 { font-weight: bold; margin: .9em 0 .9em 0; font-size: 1.8em; }
+h3 { font-weight: bold; margin: .8em 0 .8em 0; font-size: 1.6em; }
+h4 { font-weight: bold; margin: .7em 0 .7em 0; font-size: 1.4em; }
+h5 { font-weight: bold; margin: .6em 0 .6em 0; font-size: 1.2em; }
+h6 { font-weight: bold; margin: .5em 0 .5em 0; font-size: 1em; }
+
+p { margin: 1em 0 1em 0; }
+
+ul { margin: 1.5em 1em 1.5em 1em; list-style: inside; }
+li { list-style-type: disc; margin: 0 0 .3em 0; }
+
+form, input {
+  font-family: "Muli", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 1.5em;
+  font-size: 16px;
+  color: $md_gray;
+}
+
+a {
+  color: $dk_blue;
+}

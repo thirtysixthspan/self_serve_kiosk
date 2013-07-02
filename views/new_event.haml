@@ -1,0 +1,93 @@
+
+- content_for :title do
+  %title= "Create an Event"
+
+- content_for :body do
+  #new_event
+    .navbar.navbar-fixed-top
+      .navbar-inner
+        .container
+          .brand Create an Event
+          %a.btn.btn-large.pull-right{:href=>"/events/calendar"} Events
+                                
+    #display.container
+      %form{:action=>"/events/new_event", :method=>'post'}
+        .row
+          .span8.offset1.hero-unit
+            .row
+              .span5
+                %p 
+                  %label Title:
+                  %input{:type=>'text', :size=>80, :name=>'title'}
+
+                %p 
+                  %label Description:
+                  %textarea{:cols=>80, :rows=>5, :name=>'description'}
+
+                %p 
+                  %label Time: 
+                  %select{:name=>'time'}
+                    - 5.times do |t|
+                      %option #{t+7}:00am
+                      %option #{t+7}:30am
+                    %option 12:00pm
+                    %option 12:30pm
+                    - 11.times do |t|
+                      %option #{t+1}:00pm
+                      %option #{t+1}:30pm
+
+                %p 
+                  %label Duration: 
+                  %select{:name=>'duration'}
+                    %option{:value=>30*60} 30 Minutes
+                    %option{:value=>2*30*60} 1 Hour
+                    %option{:value=>3*30*60} 1 Hour, 30 Minutes
+                    %option{:value=>4*30*60} 2 Hours
+                    %option{:value=>5*30*60} 2 Hours, 30 Minutes
+                    %option{:value=>6*30*60} 3 Hours
+                    %option{:value=>7*30*60} 3 Hours, 30 Minutes
+                    %option{:value=>8*30*60} 4 Hours
+
+                %p 
+                  %label Date: 
+                  %input.short{:type=>'text', :name=>'date', :id=>'datepicker'}
+
+                %p 
+                  %label Type: 
+                  %select{:name=>'type'}
+                    %option{:value=>'Public', :selected=>'selected'} Public
+                    %option{:value=>'Private'} Private
+
+                %p 
+                  %label Location: 
+                  %select{:name=>'location'}
+                    %option{:value=>'404 Lounge', :selected=>'selected'} 404 Lounge
+                    %option{:value=>'404 Conference Room'} 404 Conference Room
+
+                %p 
+                  %label Website:
+                  %input{:type=>'text', :size=>30, :name=>'url'}
+
+                %p
+                  %label Organizer First Name:
+                  %input.short{:type=>'text', :size=>30, :name=>'first_name'}
+
+                %p
+                  %label Organizer Last Name:
+                  %input.short{:type=>'text', :size=>30, :name=>'last_name'}
+
+                %p
+                  %label Organizer Email:
+                  %input.short{:type=>'email', :size=>100, :name=>'email'}
+
+                %p
+                  %label Organizer 7 Digit Key Card Number:
+                  %input.member_number{:type=>'number', :size=>7, :name=>'member_number'}
+
+                %p
+                  %input.btn.btn-large.btn-primary.pull-right{:type=>'submit', :value=>'Submit'}
+
+          .span2
+
+
+        

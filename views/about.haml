@@ -1,0 +1,28 @@
+- content_for :title do
+  %title= "The 404"
+
+- content_for :body do
+  #about
+    = haml_partial :navbar
+                    
+    #display.container
+      .row
+        .span8.offset1.hero-unit
+          .hero-unit
+            %h1 About
+            %h2 Coworking
+            %p Finding a productive place to work is a challenge for anyone who doesn’t have an office of their own including freelancers, entrepreneurs, telecommuters, and students. Working from home is appealing until the distractions of pets and family becomes too much to handle or the social isolation turns mind numbing. Working in a coffee shop gets you away from these distractions, and caffeine stimulates the brain, but ultimately you are just working alone in a sea of people.
+
+            %p Wouldn’t it be nice to have a professional work environment available on a flexible time-share basis where you could meet and interact with other smart, creative, technical and entrepreneurial people who share similar interests?
+
+            %p Coworking is just that solution.
+            %h2 Location
+            %p The 404 is a coworking facility located on Film Row in Downtown Oklahoma City at 704 W Sheridan Avenue.
+            %h2 Parking
+            %p
+              There is a parking lot just to the west of the facility, where you may park on the eastern side of the lot, as well as plenty
+              of 2 hour parking all along Sheridan and adjoining streets. Additionally there is a parking garage a few
+              blocks west of the facility.
+            %h2 Parking Map
+            %div
+              <iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps/ms?msa=0&amp;msid=213939833336312322056.0004d683cfda3898ffd38&amp;ie=UTF8&amp;t=h&amp;ll=35.466298,-97.523564&amp;spn=0.003058,0.00457&amp;z=17&amp;output=embed"></iframe><br /><small>View <a href="https://maps.google.com/maps/ms?msa=0&amp;msid=213939833336312322056.0004d683cfda3898ffd38&amp;ie=UTF8&amp;t=h&amp;ll=35.466298,-97.523564&amp;spn=0.003058,0.00457&amp;z=17&amp;source=embed" style="color:#0000FF;text-align:left">404 Map</a> in a larger map</small>

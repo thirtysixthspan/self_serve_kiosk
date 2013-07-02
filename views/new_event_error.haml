@@ -1,0 +1,24 @@
+
+- content_for :title do
+  %title= "New Event Error"
+
+- content_for :body do
+  #new_event
+    .navbar.navbar-fixed-top
+      .navbar-inner
+        .container
+          .brand New Event Error
+          %a.btn.btn-large.btn-primary.pull-right{:href=>"/events/calendar"} Events
+                                
+    #display.container
+      .row
+        .span8.offset1.hero-unit
+          .row
+            .span5
+              = @error
+            .span2  
+
+        .span2
+
+
+        

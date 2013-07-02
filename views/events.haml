@@ -1,0 +1,23 @@
+!!!
+%html
+  %head
+    = yield_content :title
+    
+    %link{:href=>"/bootstrap/css/bootstrap.css",:rel=>"stylesheet"}
+    %link{:href=>"/bootstrap/css/bootstrap-responsive.css", :rel=>"stylesheet"}
+    %link{:REL=>'StyleSheet',:HREF=>"/css/events.css",:TYPE=>"text/css",:MEDIA=>'screen'}
+    %link{:REL=>'StyleSheet',:HREF=>"http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.21/themes/eggplant/jquery-ui.css",:TYPE=>"text/css",:MEDIA=>'screen'}
+
+
+
+    = yield_content :head
+
+  %body
+    = yield_content :body
+  
+
+    %script{ :type => "text/javascript", :src=>"https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js",}
+    %script{ :type => "text/javascript", :src=>"https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.21/jquery-ui.min.js",}
+    
+    %script{ :type => "text/javascript", :src => "/bootstrap/js/bootstrap.js"}
+    %script{ :type => "text/javascript", :src => "/js/application.js" }

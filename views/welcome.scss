@@ -1,0 +1,29 @@
+#welcome {
+  
+  #display {
+    width: 800px;
+    margin: auto;
+  }
+  
+  img {
+    width: 800px;
+  }
+  
+  .navbar {
+    .brand {  
+      font-size: 55px; 
+      font-family: Impact, Charcoal, sans-serif;
+    }
+    .container {
+      height: 75px;
+    }
+    .btn {
+      margin-top: 10px;
+      padding: 15px;
+    }
+  }
+  
+  .navbar-fixed-top {
+    top:100px;
+  }
+}

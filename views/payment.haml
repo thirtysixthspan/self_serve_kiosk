@@ -1,0 +1,48 @@
+- content_for :title do
+  %title= "The 404 Store"
+
+- content_for :head do
+  %meta{:"http-equiv"=>"Refresh", :content=>"240; url=/store/welcome"}
+
+  %script{ :type => "text/javascript", :src => "/js/card.js"}
+
+- content_for :body do
+  #payment
+
+    %form{:action=>"/store/thank_you", :method=>'post'}
+      %input{:type=>'hidden', :name=>'order_string', :value=>@this_order.to_json}
+      .navbar.navbar-fixed-top
+        .navbar-inner
+          .container
+            .brand Provide Payment
+            %input.btn.btn-large.btn-primary.pull-right#make-purchase{:type=>'submit', :value=>'Make Purchase', :disabled=>'disabled'}
+            %a.btn.btn-large.pull-right{:href=>"/store/select_items"} Back
+        
+      #display.container
+        .row
+          #swipe_card.span5
+            %p.alert.alert-success Please swipe your card.
+            #card_data
+              %p
+                .alert 
+                  Customer Name
+                  %span#name-display
+              %p
+                .alert 
+                  %label Credit Card
+                  %span#last4-display
+              %input{:type=>'hidden', :id=>'card-token-input', :name=>'card_token', :value=>''}
+              %input{:type=>'hidden', :id=>'name-input', :name=>'name', :value=>''}
+          #summary.span5
+            %p Your total purchase is #{display_price(@this_order.total)} plus tax. 
+            %p
+            %p 
+              All 404 Store purchases are totaled and billed periodically with
+              taxes charged at that time. 
+            %p
+              %label Receipt Email:
+              %input{:type=>'text', :size=>70, :id=>'email-input', :name=>'email', :value=>''}
+            %p
+              Provide an email above and a detailed
+              receipt will be emailed to you at that time.
+              

@@ -1,0 +1,22 @@
+- content_for :title do
+  %title= "The 404: Image Gallery"
+
+- content_for :body do
+  :javascript
+    $(function (){
+     $('a.thumbnail').lightBox();
+    });
+  #about
+    = haml_partial :navbar
+
+    #display.container
+      .row
+        .span8.offset1.hero-unit
+          .hero-unit
+            %h1 Gallery
+            .gallery-container
+              %ul.thumbnails
+                - (0..23).each do |i|
+                  %li.span3
+                    %a.thumbnail{:href => "/images/gallery/facility-#{i.to_s.rjust(3, "0")}.jpg"}
+                      %img{:src => "/images/gallery/facility-#{i.to_s.rjust(3, "0")}.jpg", :alt => ""}

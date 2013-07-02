@@ -1,0 +1,3 @@
+mkdir -p /srv/certs
+cp -rv certs/* /srv/certs/
+chown -R deployer /srv/certs

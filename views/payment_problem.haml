@@ -1,0 +1,26 @@
+- content_for :title do
+  %title= "Payment Problem"
+
+- content_for :head do
+  %meta{:"http-equiv"=>"Refresh", :content=>"15; url=/store/welcome"}  
+
+- content_for :body do
+  #payment
+    .navbar.navbar-fixed-top
+      .navbar-inner
+        .container
+          .brand We had a problem processing your payment.
+                                
+    #display.container
+      .row
+        .span8.offset1.hero-unit
+          .row
+            .span5
+              We're sorry but we are unable to accept your payment for an unknown reason. Please
+              try a different credit card or try again later.
+            .span2  
+
+        .span2
+
+
+        

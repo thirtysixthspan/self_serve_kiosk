@@ -1,0 +1,42 @@
+- content_for :title do
+  %title= "Events at the 404"
+
+- content_for :body do
+  #calendar
+    .navbar.navbar-fixed-top
+      .navbar-inner
+        .container
+          .brand Events at the 404
+          %a.btn.btn-large.pull-right{:href=>"/events/new_event"} Add Event
+         
+    #display.container
+      - @events.sort{|a,b| a.date.to_i <=> b.date.to_i}.each do |event|
+        .row
+          .span8.offset1.hero-unit
+            .row
+              .span5
+                %p Event: #{event.title}
+                %p Time: #{Time.at(event.date.to_i).strftime("%l:%M%P, %A, %-d %B, %Y")}
+                %p Duration: #{display_time(event.duration)} 
+                %p Location: #{event.location}
+                - if event.organizer 
+                  %p Organized by: #{event.organizer.full_name}
+                - if event.description
+                  %p Description: #{event.description}
+                %p 
+                  %a.visibility_button{:id=>event.id} Registered: #{event.number_registered}
+                  .attendee_list.offset1.hide{:id=>event.id}
+                    - event.attendee_list.members.each do |attendee|
+                      %p= attendee.full_name
+
+              .span3
+                - if event.url
+                  %p
+                    %a.btn.btn-large.btn-primary{:href=>event.url} Visit event site
+                - if !event.full?
+                  %p 
+                    %a.btn.btn-large.btn-primary{:href=>"/events/registration/#{event.id_hash}"} Register to attend
+          .span2
+
+
+        

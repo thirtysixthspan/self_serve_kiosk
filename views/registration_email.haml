@@ -1,0 +1,27 @@
+
+- content_for :title do
+  %title= "Registration Confirmation Required"
+
+- content_for :body do
+  #registration
+    .navbar.navbar-fixed-top
+      .navbar-inner
+        .container
+          .brand Registration Confirmation Required
+          %a.btn.btn-large.btn-primary.pull-right{:href=>"/events/calendar"} Events
+                                
+    #display.container
+      .row
+        .span8.offset1.hero-unit
+          .row
+            .span5
+              %p 
+                #{@person.first_name.capitalize}, you will receive an email at #{@person.email} that
+                contains a link that you must follow in order to successfuly register for #{@event.title}.
+                You must complete you confirmation within 24 hours or the registration link will expire.
+            .span2  
+
+        .span2
+
+
+        

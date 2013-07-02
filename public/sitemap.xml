@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+        xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+    <!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+    <url>
+        <loc>http://self_service_kiosk.com/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>1.00</priority>
+    </url>
+    <url>
+        <loc>http://self_service_kiosk.com/about</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>http://self_service_kiosk.com/memberships</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>http://self_service_kiosk.com/events/calendar</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>http://self_service_kiosk.com/facility</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>http://self_service_kiosk.com/gallery</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>http://self_service_kiosk.com/facility_rules</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>http://self_service_kiosk.com/network_rules</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>http://self_service_kiosk.com/terms_of_service</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>http://self_service_kiosk.com/privacy_policy</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>http://self_service_kiosk.com/events/new_event</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.64</priority>
+    </url>
+</urlset>

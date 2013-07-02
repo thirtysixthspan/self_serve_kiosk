@@ -1,0 +1,41 @@
+- content_for :title do
+  %title= "#{@model} at the 404"
+
+- content_for :body do
+  #customers
+    .navbar.navbar-fixed-top
+      .navbar-inner
+        .container
+          .brand #{@model} at the 404
+          %a.btn.btn-large.pull-right{:href=>"/admin"} Panel
+          %a.btn.btn-large.pull-right{:href=>"/admin/inspect/#{@model}"}= @model
+         
+    #display.container
+      .row
+        .span11.hero-unit
+          %table
+            %thead
+              %tr
+                %th Key
+                %th Value
+            %tbody
+              - @properties.each do |key,value|
+                %tr
+                  %td= key
+                  %td
+                    - if value.to_s.match(/:id:/)
+                      - if value.class == Array
+                        %ul
+                          - value.each do |entry|
+                            %li= model_link(entry)
+                      - else
+                        = model_link(value)
+                    - else
+                      = value
+
+      .row
+        .span11
+          - @actions.each do |action|
+            %a.btn.btn-large{:href=>"/admin/#{action}/#{@model}/#{@instance.id.gsub(/.*?:id:/,'')}"}= action
+
+

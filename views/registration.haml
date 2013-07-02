@@ -1,0 +1,38 @@
+- content_for :title do
+  %title= "Register for an Event"
+
+- content_for :body do
+  #registration
+    .navbar.navbar-fixed-top
+      .navbar-inner
+        .container
+          .brand Register for an Event
+          %a.btn.btn-large.pull-right{:href=>"/events/calendar"} Events
+                                
+    #display.container
+      %form{:action=>"/events/registration", :method=>'post'}
+        %input{:type=>'hidden', :name=>'id', :value=>@event.id_hash}
+        .row
+          .span8.offset1.hero-unit
+            .row
+              .span5
+                %p Event: #{@event.title}
+                %p Time: #{Time.at(@event.date.to_i).strftime("%l:%M%P %A, %-d %B, %Y")}
+                %p Duration: #{display_time(@event.duration)}                 
+                %p Location: #{@event.location}
+                %p
+                  First Name:
+                  %input{:type=>'text', :size=>30, :name=>'first_name'}      
+                %p
+                  Last Name:
+                  %input{:type=>'text', :size=>30, :name=>'last_name'}      
+                %p
+                  Email:
+                  %input{:type=>'email', :size=>100, :name=>'email'}      
+              .span2  
+                %input.btn.btn-large.btn-primary.pull-right{:type=>'submit', :value=>'Register'}
+
+          .span2
+
+
+        

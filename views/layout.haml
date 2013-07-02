@@ -1,0 +1,35 @@
+!!!
+%html
+  %head
+    = yield_content :title
+    %meta{:name => "keywords", :value => "coworking,oklahoma coworking,meeting,meeting space"}
+    %meta{:name => "description", :value => "The 404 is a coworking facility located on Film Row in Downtown Oklahoma City at 704 W Sheridan Avenue."}
+    %meta{:name => "language", :value => "en"}
+    %link{:href=>"/bootstrap/css/bootstrap.css",:rel=>"stylesheet"}
+    %link{:href=>"/bootstrap/css/bootstrap-responsive.css", :rel=>"stylesheet"}
+    %link{:href=>"/jquery-lightbox/css/jquery.lightbox-0.5.css", :rel=>"stylesheet"}
+    %link{:REL=>'StyleSheet',:HREF=>"/css/style.css",:TYPE=>"text/css",:MEDIA=>'screen'}
+    %script{ :type => "text/javascript", :src=>"http://code.jquery.com/jquery-1.9.1.min.js",}
+    %script{ :type => "text/javascript", :src=>"https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.21/jquery-ui.min.js",}
+    %script{ :type => "text/javascript", :src=>"/jquery-lightbox/js/jquery.lightbox-0.5.min.js",}
+
+    %script{ :type => "text/javascript", :src => "/bootstrap/js/bootstrap.js"}
+    %script{ :type => "text/javascript", :src => "/js/application.js" }
+
+    = yield_content :head
+
+  %body
+    = yield_content :body
+
+  = haml_partial "footer"
+
+  :javascript
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-38840329-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();

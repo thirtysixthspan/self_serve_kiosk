@@ -1,0 +1,46 @@
+@import "reset";
+@import "colors";
+@import "layout";
+@import "type";
+@import "_footer";
+@import "index";
+@import "not_found";
+@import "error";
+
+@import "index";
+@import "about";
+
+html {
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  background-color: #ffffff;
+}
+
+::-moz-selection {
+	background: rgba(90,90,90,0);
+}
+
+.clear {
+  clear: both;
+  height: 1px;
+  width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

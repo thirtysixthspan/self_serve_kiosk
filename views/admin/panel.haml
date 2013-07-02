@@ -1,0 +1,32 @@
+- content_for :title do
+  %title= "Admin Panel at the 404"
+
+- content_for :body do
+  #customers
+    .navbar.navbar-fixed-top
+      .navbar-inner
+        .container
+          .brand Admin Panel at the 404
+         
+    #display.container
+      .row
+        .span11.hero-unit
+          %h2 Inspect
+          %ul
+            - $models.each do |model|
+              %li
+                %a{href: "/admin/inspect/#{model}"}= model
+          %h2 Invoicing
+          %ul
+            %li
+              %a{href: "/admin/invoicing/build"} Build Invoices
+            %li
+              %a{href: "/admin/email_invoice/Invoice/all"} Email Invoices
+            %li
+              %a{href: "/admin/charge_card/Invoice/all"} Charge Invoices
+            %li
+              %a{href: "/admin/retrieve_charge_status/Invoice/all"} Retrieve Charge Statuses
+            %li
+              %a{href: "/admin/send_charge_confirmation/Invoice/all"} Send Charge Confirmations
+
+        

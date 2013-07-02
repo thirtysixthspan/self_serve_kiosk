@@ -1,0 +1,56 @@
+
+#new_event {
+  
+  #display {
+    margin-top: 100px;
+  }
+    
+  .hero-unit {
+    padding-top: 10px;
+  }
+
+  input {
+    width:500px;
+  }
+
+  select {
+    width:260px;  
+  }
+
+  input.short {
+    width:250px;
+  }
+
+  input.member_number {
+    width:75px;
+  }
+
+  input.btn {
+    width:150px;
+    margin:0px;
+    float:left;
+  }
+
+
+  textarea {
+    width:500px;
+  }
+
+  .navbar {
+    .brand {  
+      font-size: 55px; 
+      font-family: Impact, Charcoal, sans-serif;
+    }
+    .container {
+      height: 75px;
+    }
+    .btn {
+      margin-top: 10px;
+      padding: 15px;
+    }
+  }
+  
+  .navbar-fixed-top {
+    top:0px;
+  }
+}

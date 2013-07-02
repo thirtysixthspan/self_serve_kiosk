@@ -1,0 +1,13 @@
+#message
+  %h2 404 Store Credit Card Charge Successful
+  %h3 Customer: #{@invoice.customer.cc_name}
+  %h3 Email: #{@invoice.customer.email}
+  %h3 Invoice Date: #{@invoice.date}
+
+  %p
+    A charge for the amount of #{display_price(@invoice.total)} was successfully completed for purchases made at the 404 Store. If you have any questions about this transaction please contact billing@self_service_kiosk.com
+
+#footer
+  %p 
+    This message was sent by the 404 Store at self_service_kiosk.com at your request.
+    If this message reached you in error, we apologize and ask you to please delete it.

@@ -1,0 +1,35 @@
+@import "reset";
+@import "colors";
+@import "layout";
+@import "type";
+@import "_footer";
+@import "index";
+@import "not_found";
+@import "error";
+
+@import "thank_you";
+@import "payment";
+@import "your_purchase";
+@import "select_items";
+@import "welcome";
+
+html {
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  background-color: #ffffff;
+}
+
+::-moz-selection {
+	background: rgba(0,0,0,0);
+}
+
+.clear {
+  clear: both;
+  height: 1px;
+  width: 100%;
+}
+
+
+

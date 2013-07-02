@@ -1,0 +1,28 @@
+- content_for :title do
+  %title= "The 404"
+
+- content_for :body do
+  #about
+    = haml_partial :navbar
+
+    #display.container
+      .row
+        .span8.offset1.hero-unit
+          .hero-unit
+            %h1 The 404
+            %img.homepage{ :src => '/images/404-icon.jpg'}
+            %h2 About
+            %p
+              The 404 is a space for coworking, user group meetings, and tech events.
+              %a{ :href => '/about'}
+                learn more
+            %h2 Mission
+            %p
+              The 404 aims to improve opportunities awarded to the technical, creative, and entrepreneurial community of Oklahoma City.
+            %h2 Description
+            %p
+              The 404 is focused on improving the technical, creative and entrepreneurial opportunities, resources and
+              community in Oklahoma City. That can mean a lot of things, but as we see it, it means more jobs, more
+              startup businesses, more events, more educational opportunities, stronger community, more attention from
+              local government to the valuable contributions we make that help create a thriving, growing city and
+              economy.

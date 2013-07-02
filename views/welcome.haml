@@ -1,0 +1,14 @@
+- content_for :title do
+  %title= "The 404 Store"
+
+- content_for :body do
+  #welcome
+    .navbar.navbar-fixed-top
+      .navbar-inner
+        .container
+          .brand THE 404 STORE
+          %a.btn.btn-large.btn-primary.pull-right{:href=>"/store/select_items"} Make a Purchase
+						        
+    #display
+      %img{:src=>"/images/store.png"}
+        

@@ -1,0 +1,29 @@
+- content_for :title do
+  %title= "The 404 Store"
+
+- content_for :head do
+  %meta{:"http-equiv"=>"Refresh", :content=>"15; url=/store/welcome"}
+
+- content_for :body do
+  #thank_you
+
+    .navbar.navbar-fixed-top
+      .navbar-inner
+        .container
+          .brand Thank you!
+          %a.btn.btn-large.pull-right{:href=>"/store/welcome"} Storefront
+        
+    #display.container
+      .row
+        .span8.offset1.hero-unit
+          .row
+            .span7
+              %p Your purchase has been recorded.
+              %p All 404 Store purchases are totaled and billed periodically.
+              %p Each purchase helps keep The 404 open. 
+              %p Thank you for your support!
+            .span2  
+
+        .span2
+              
+          

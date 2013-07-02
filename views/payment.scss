@@ -1,0 +1,60 @@
+#payment {
+  
+  #display {
+    position: relative;
+    top: 75px;
+    margin:auto;
+  }
+  
+  .navbar {
+    .brand {  
+      font-size: 55px; 
+      font-family: Impact, Charcoal, sans-serif;
+    }
+    .container {
+      height: 75px;
+    }
+    .btn {
+      margin-top: 10px;
+      padding: 15px;
+    }
+
+  }
+  
+  .navbar-fixed-top {
+    top:20px;
+  }  
+  
+  #summary {
+
+    margin-top: 50px;
+    border: 2px solid black;    
+    min-height: 325px;
+    padding: 20px;
+    font-size: 18px;  
+    text-indent: 20px;
+      
+    input {
+     width: 350px;
+     margin-top: 15px;
+    }
+    
+  }
+
+  #swipe_card {
+    margin-top: 50px;
+    border: 2px solid black;    
+    min-height: 300px;
+    padding: 20px;
+    font-size: 20px;  
+  }
+    
+  #last4-display, #name-display {
+    float:right;
+  }
+  label {
+    display: inline;
+  }  
+
+}
+

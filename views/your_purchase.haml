@@ -1,0 +1,40 @@
+- content_for :title do
+  %title= "The 404 Store"
+
+- content_for :head do
+  %meta{:"http-equiv"=>"Refresh", :content=>"240; url=/store/welcome"}
+
+- content_for :body do
+  #your_purchase
+
+    %form{:action=>"/store/payment", :method=>'post'}
+      %input{:type=>'hidden', :name=>'order_string', :value=>@this_order.to_json}
+      .navbar.navbar-fixed-top
+        .navbar-inner
+          .container
+            .brand Your Purchase
+            %input.btn.btn-large.btn-primary.pull-right{:type=>'submit', :value=>'Select Payment'}
+            %a.btn.btn-large.pull-right{:href=>"/store/select_items"} Back
+        
+    #display.container
+      .row
+        #item_list.span5
+          %table.table-bordered
+            %tr
+              %th Quantity
+              %th Item
+              %th Price
+              %th Total
+            - @this_order.items.each do |properties|
+              - if properties[:quantity].to_i>0
+                %tr{:name=>properties[:name]}
+                  %td.item_quantity= properties[:quantity]
+                  %td.item_name= properties[:name]
+                  %td.item_price= display_price(properties[:price])
+                  %td.item_total= display_price(properties[:price] * properties[:quantity].to_i)
+                  
+        #item_summary.span5
+          %p Your total purchase is #{display_price(@this_order.total)} plus tax.
+          %p
+          %p All members receive a 10% discount!
+          
